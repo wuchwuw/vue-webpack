@@ -1,27 +1,25 @@
-module.export = {
+module.exports = {
+  root: true,
   env: {
-    "es6": true,
-    "browser": true,
-    "node": true
+    es6: true,
+    browser: true,
+    node: true
   },
+  parser: 'babel-eslint',
   parserOptions: {
-    "parser": 'babel-eslint',
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
+    sourceType: 'module'
   },
-  extends: [
-    'plugin:vue/essential',
-    'standard'
-  ],
+  extends: 'standard',
   plugins: [
-    'vue'
+    'html'
   ],
+  // settings: {
+  //   "html/indent": "0"
+  // },
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': 'error'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }

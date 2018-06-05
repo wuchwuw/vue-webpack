@@ -24,6 +24,10 @@ module.exports = merge(baseWebpackConfig, {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
+          loaders: {
+            stylus: 'vue-style-loader!css-loader!stylus-loader'
+          },
+          postcss: {},
           transformToRequire: {
             video: ['src', 'poster'],
             source: 'src',

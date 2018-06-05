@@ -1,12 +1,20 @@
 <template>
-  <div id="app">xxx</div>
+  <div>xxx</div>
 </template>
 <script>
   export default {
     name: 'App',
     methods: {
-      aa() {}
+      aa () {}
     }
   }
 </script>
-<style></style>
+<style lang="stylus" src="common/stylus/index.styl"></style>
+<style>
+#app {
+  display: flex;
+  height: 100px;
+  width: 200px;
+  background: red
+}
+</style>
